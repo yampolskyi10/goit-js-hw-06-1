@@ -1,18 +1,8 @@
-const jsdom = require("jsdom");
-const { JSDOM } = jsdom;
 
-const dom = new JSDOM(`<!DOCTYPE html><html><body>
-    <ul id="categories">
-        <!-- Ваші дані HTML тут -->
-    </ul>
-</body></html>`);
-
-
-const document = dom.window.document;
 
 
 const categoriesList = document.querySelector('ul#categories');
-const categoryItems = categoriesList.querySelectorAll('li.item');
+
 
 console.log(`Number of categories: ${categoryItems.length}`);
 
